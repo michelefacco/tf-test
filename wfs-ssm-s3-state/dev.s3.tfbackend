@@ -1,0 +1,3 @@
+bucket = "faccmi01-tf-state-test-156305373065-eu-west-1"
+region = "eu-west-1"
+key = "tf-test/terraform.tfstate"

@@ -25,5 +25,9 @@ Clean up actions:
     terraform destroy
 - cd ../wfs-vars-s3-state
     terraform destroy -var-file=dev.tfvars
+- cd ../wfs-tfadd-s3-state-cleanup
+    terraform init -backend-config=dev.s3.tfbackend
+    terraform apply
 - cd ../wfs-s3-module
     terraform destroy -var-file=dev.tfvars
+- aws s3 rm s3://faccmi01-tf-state-test-156305373065-eu-west-1/tf-test --recursive

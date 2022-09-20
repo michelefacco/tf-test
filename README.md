@@ -31,3 +31,17 @@ Clean up actions:
 - cd ../wfs-s3-module
     terraform destroy -var-file=dev.tfvars
 - aws s3 rm s3://faccmi01-tf-state-test-156305373065-eu-west-1/tf-test --recursive
+
+Extras:
+- wfs-lambda-EmailDatSource (this is actually changing resources in DEV, so be carefull when using it!!!)
+- wfs-networking (example on how to logically separated the networking piece from the EC2)
+- wfs-ec2 (example on how to separated the EC2 piece from the networking)
+
+Extra clean up actions:
+- cd ../wfs-networking-cleanup
+    terraform state rm aws_security_group.imported
+    terraform state rm aws_subnet.imported
+    terraform state rm aws_vpc.imported
+    terraform destroy
+- cd ../wfs-ecs
+    terraform destroy

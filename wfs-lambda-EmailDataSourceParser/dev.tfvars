@@ -8,3 +8,6 @@ code = "lambda-code/index.js"
 
 # Lambda Extras
 trusted_entities = ["firehose.amazonaws.com"]
+
+# Secret Manager reference example
+secret_name = "/test/faccmi01-tf-ws"
